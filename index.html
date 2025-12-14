@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Global Weather Pro</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="top-bar">
+    <select id="language" onchange="changeLang()">
+        <option value="tr">🇹🇷 TR</option>
+        <option value="en">🇬🇧 EN</option>
+    </select>
+    <button onclick="toggleTheme()">🌙</button>
+</div>
+
+<div class="card">
+    <h1 id="title">🌍 Hava Durumu</h1>
+    <input id="city" placeholder="Şehir gir">
+    <button onclick="getWeather()">Göster</button>
+
+    <div id="result"></div>
+    <div id="forecast"></div>
+    <div id="map"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
